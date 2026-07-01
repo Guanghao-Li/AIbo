@@ -1,0 +1,37 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# AIBO local runtime state
+.aibo/*
+!.aibo/
+!.aibo/context.md
+runs/
+workspace/
+
+# Python and build artifacts
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Editors and local tool state
+.vscode/
+.idea/
+.agents/
+.codex/
+
+# Misc
+uv.lock
+.DS_Store
+*.log
