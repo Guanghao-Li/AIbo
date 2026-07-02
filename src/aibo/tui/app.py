@@ -381,15 +381,15 @@ class ChatTextArea(TextArea):
         min-height: 3;
         max-height: 12;
         border: round #9ed2ee;
-        background: #f8fcff;
-        color: #143247;
+        background: transparent;
+        color: #d7f3ff;
         padding: 0 1;
         margin: 1 2;
         scrollbar-size-vertical: 1;
     }
     ChatTextArea:focus {
         border: round #4fb3e8;
-        background: #ffffff;
+        background: transparent;
     }
     """
 
@@ -472,28 +472,28 @@ class AiboTuiApp(App[None]):
     ]
     CSS = """
     Screen {
-        background: #eff8ff;
-        color: #143247;
+        background: transparent;
+        color: #d7f3ff;
     }
     #header {
         height: 1;
-        background: #cfeeff;
-        color: #102d42;
+        background: transparent;
+        color: #d7f3ff;
         padding: 0 1;
     }
     #log-view {
         height: 1fr;
-        background: #eff8ff;
+        background: transparent;
         scrollbar-size-vertical: 1;
         scrollbar-size-horizontal: 1;
     }
     #banner {
-        color: #2f8fbd;
-        padding: 1 2 0 2;
+        color: #8bd3ff;
+        padding: 1 2 1 2;
     }
-    Static.user-turn { color: #102d42; padding: 1 2 0 2; }
-    Static.run-header { color: #5b7f93; padding: 1 2 0 2; }
-    Static.step-divider { color: #5b7f93; padding: 0 2; }
+    Static.user-turn { color: #d7f3ff; padding: 1 2 0 2; }
+    Static.run-header { color: #8fb8c9; padding: 1 2 0 2; }
+    Static.step-divider { color: #8fb8c9; padding: 0 2; }
     Static.run-ok { color: green; padding: 0 2 1 2; }
     Static.run-err { color: red; padding: 0 2 1 2; }
     Static.usage { padding: 0 2; }
@@ -501,12 +501,13 @@ class AiboTuiApp(App[None]):
     """
 
     _BANNER = (
-        "[bold #4fb3e8]    _    ___ ____   ___ [/bold #4fb3e8]\n"
-        "[bold #4fb3e8]   / \\  |_ _| __ ) / _ \\[/bold #4fb3e8]\n"
-        "[bold #4fb3e8]  / _ \\  | ||  _ \\| | | |[/bold #4fb3e8]\n"
-        "[bold #4fb3e8] / ___ \\ | || |_) | |_| |[/bold #4fb3e8]\n"
-        "[bold #4fb3e8]/_/   \\_\\___|____/ \\___/[/bold #4fb3e8]\n"
-        "[dim]  输入消息开始对话  ·  键入 / 触发 skill  ·  Ctrl+C 退出[/dim]"
+        "     █████╗    ██╗    ██████╗     ██████╗\n"
+        "    ██╔══██╗   ██║    ██╔══██╗   ██╔═══██╗\n"
+        "    ███████║   ██║    ██████╔╝   ██║   ██║\n"
+        "    ██╔══██║   ██║    ██╔══██╗   ██║   ██║\n"
+        "    ██║  ██║   ██║    ██████╔╝   ╚██████╔╝\n"
+        "    ╚═╝  ╚═╝   ╚═╝    ╚═════╝     ╚═════╝\n"
+        "  输入消息开始对话  ·  键入 / 触发 skill  ·  Ctrl+C 退出"
     )
 
     # 初始化连接参数和 TUI 内部状态
